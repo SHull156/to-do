@@ -1,9 +1,9 @@
-let addTaskButton = document.getElementById("add-task-button");
-let newTaskInput = document.getElementById("input-text");
+const addTaskButton = document.getElementById("add-task-button");
+const newTaskInput = document.getElementById("input-text");
 let newTaskText = ""
-let outstandingTaskList = document.getElementById("outstanding-task-list");
-let inProcessTaskList = document.getElementById("in-process-task-list");
-
+const outstandingTaskList = document.getElementById("outstanding-task-list");
+const inProcessTaskList = document.getElementById("in-process-task-list");
+const completedTaskList = document.getElementById("completed-task-list");
 
 
 addTaskButton.addEventListener("click", () => {
@@ -22,3 +22,13 @@ outstandingTaskList.addEventListener("click", (e) => {
     }
 
 })
+
+inProcessTaskList.addEventListener("click", (e) => {
+    let listItem = e.target;
+    if(e.target.tagName === "LI"){
+        completedTaskList.appendChild(listItem)
+    }
+
+})
+
+
