@@ -1,0 +1,55 @@
+body {
+    background-color: aqua;
+    padding: 20px
+}
+
+#hero {
+    background-color: rgb(153, 229, 246);
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+#task-creator{
+    background-color: rgb(143, 154, 218);
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.container{
+    display: flex;
+    size: 200px;
+    padding: 20px;
+    height: flex;
+    width: flex;
+    border-radius: 10px;
+
+}
+
+#todos{
+    display: flex;
+    gap: 20px;
+}
+
+.card{
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+#outstanding{
+    background-color: rgb(244, 82, 82);
+
+}
+
+#in-process{
+    background-color: rgb(242, 105, 14);
+
+}
+
+#complete{
+    background-color: rgb(27, 188, 51);
+
+}
