@@ -19,10 +19,7 @@ body {
 
 .container{
     display: flex;
-    size: 200px;
     padding: 20px;
-    height: flex;
-    width: flex;
     border-radius: 10px;
 
 }
