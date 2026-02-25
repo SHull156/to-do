@@ -32,17 +32,31 @@ const saveCurrentState = () => {
     })
 }
 
+//create li helper function
+const createTaskElement = (taskText) =>{
+    const li = document.createElement("li");
+    li.textContent = taskText;
+    const deleteBtn = document.createElement("button");
+    deleteBtn.innerText = "x";
+    deleteBtn.addEventListener("click", (e) => {
+        const el = e.target.parentElement;
+        el.remove(); 
+        saveCurrentState();
+    });
+    li.appendChild(deleteBtn);
+    return li;
+
+}
+
 //add new tasks
 addTaskButton.addEventListener("click", () => {
     newTaskText = newTaskInput.value;
     if (!newTaskText.trim()) return;
-    let newLi = document.createElement("li");
-    newLi.textContent = newTaskText;
+    const newLi = createTaskElement(newTaskText);
     outstandingTaskList.appendChild(newLi);
     newTaskInput.value ="";
     saveCurrentState();
 });
-
 
 //move tasks to in progress
 outstandingTaskList.addEventListener("click", (e) => {
@@ -66,18 +80,15 @@ inProcessTaskList.addEventListener("click", (e) => {
 const savedTodo = loadTodoFromLocalStorage();
 if (savedTodo) {
     savedTodo.outstanding.forEach(taskText =>{
-        const newLi = document.createElement("li");
-        newLi.textContent = taskText;
+        const newLi = createTaskElement(taskText);
         outstandingTaskList.appendChild(newLi)
     });
     savedTodo.inProcess.forEach(taskText =>{
-        const newLi = document.createElement("li");
-        newLi.textContent = taskText;
+        const newLi = createTaskElement(taskText);
         inProcessTaskList.appendChild(newLi)
     });
     savedTodo.completed.forEach(taskText =>{
-        const newLi = document.createElement("li");
-        newLi.textContent = taskText;
+        const newLi = createTaskElement(taskText);
         completedTaskList.appendChild(newLi)
     });
     
