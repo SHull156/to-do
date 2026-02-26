@@ -18,14 +18,14 @@ TaskFlow is a lightweight to-do list generator. It allows users to add new items
 - Generated lists persist across page reloads using `localStorage`
 - The same todo list is restored exactly as generated
 
-## What this project demonstrates
+# What this project demonstrates
 - DOM manipulation — creating and appending elements dynamically without a framework
 - Event delegation — single event listeners on parent elements handle all child interactions
 - localStorage persistence — tasks survive page refresh using JSON serialisation
 - Helper functions — reusable `createTaskElement` and `saveCurrentState` functions keep code DRY
 - Vanilla JavaScript — no libraries or frameworks
 
-## How to run locally
+# How to run locally
 1. Clone the repository
 2. Open `index.html` in your browser  
 - live link: https://shull156.github.io/to-do/
