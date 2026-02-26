@@ -1,7 +1,5 @@
 # TaskFlow
-
 TaskFlow is a lightweight to-do list generator. It allows users to add new items and then track each item through to completion. It uses a three-column kanban approach to allow users to keep track of the status of each item.
-
 
 # Key idea
 - Built to allow the user to track all outstanding tasks in one place

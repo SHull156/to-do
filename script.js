@@ -63,7 +63,7 @@ addTaskButton.addEventListener("click", () => {
 //move tasks to in progress
 outstandingTaskList.addEventListener("click", (e) => {
     const li = e.target.closest('li');
-    if(li){
+    if(li && e.target.tagName !== "BUTTON"){
         inProcessTaskList.appendChild(li)
     }
     saveCurrentState();
@@ -72,7 +72,7 @@ outstandingTaskList.addEventListener("click", (e) => {
 //move tasks to completed
 inProcessTaskList.addEventListener("click", (e) => {
     const li = e.target.closest('li');
-    if(li){
+    if(li && e.target.tagName !== "BUTTON"){
         completedTaskList.appendChild(li)
     }
    saveCurrentState();
