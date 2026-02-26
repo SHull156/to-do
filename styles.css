@@ -107,3 +107,13 @@ li button {
 li button:hover {
     color: var(--accent);
 }
+
+@media (max-width: 768px) {
+    #todos {
+        flex-direction: column;
+    }
+    
+    main {
+        padding: 0 12px;
+    }
+}
