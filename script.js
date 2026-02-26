@@ -26,16 +26,18 @@ const loadTodoFromLocalStorage = () => {
 //save state helper function
 const saveCurrentState = () => {
     saveTodoToLocalStorage ({
-        outstanding: Array.from(outstandingTaskList.querySelectorAll("li")).map(li => li.textContent),
-        inProcess: Array.from(inProcessTaskList.querySelectorAll("li")).map(li => li.textContent),
-        completed: Array.from(completedTaskList.querySelectorAll("li")).map(li => li.textContent)
+        outstanding: Array.from(outstandingTaskList.querySelectorAll("li")).map(li => li.querySelector("span").textContent),
+        inProcess: Array.from(inProcessTaskList.querySelectorAll("li")).map(li => li.querySelector("span").textContent),
+        completed: Array.from(completedTaskList.querySelectorAll("li")).map(li => li.querySelector("span").textContent)
     })
 }
 
 //create li helper function
 const createTaskElement = (taskText) =>{
     const li = document.createElement("li");
-    li.textContent = taskText;
+    const span = document.createElement("span");
+    span.textContent = taskText;
+    li.appendChild(span);
     const deleteBtn = document.createElement("button");
     deleteBtn.innerText = "x";
     deleteBtn.addEventListener("click", (e) => {
