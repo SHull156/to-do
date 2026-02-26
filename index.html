@@ -9,55 +9,58 @@
     
 
 </head>
-<body>
-    <section id="hero">
-        <h1>To do list</h1>
-        <h2>The to do list for busy EAs</h2>
-        <p>Use this to do list to track task so you never miss an email again</p>
-    </section>
 
-    <section id="task-creator">
-        <label for="">Create a task</label>
-        <input id="input-text" type="text">
-        <button id="add-task-button">Add task</button>
+<main>
+    <body>
+        <section id="hero">
+            <h1>To do list</h1>
+            <h2>The to do list for busy EAs</h2>
+            <p>Use this to do list to track task so you never miss an email again</p>
+        </section>
 
-    </section>
-
-    <section id="todos">
-
-        <div class="card" id="outstanding">
-            <div class ="container">
-                <h2>Outstanding tasks</h2>
-                <ul id="outstanding-task-list">
-
-                </ul>
-            </div>
-        </div>
-
-        <div class="card" id="in-process">
-            <div class ="container">
-                <h2>In process tasks</h2>
-                <ul id="in-process-task-list">
-
-                </ul>
-            </div>
-        </div>
-
-        <div class="card" id= "complete">
-            <div class ="container">
-                <h2>Completed tasks</h2>
-                <ul id="completed-task-list">
-
-                </ul>
-            </div>
-        </div>
-
+        <section id="task-creator">
+            <label for="">Create a task</label>
+            <input id="input-text" type="text">
+            <button id="add-task-button">Add task</button>
 
         </section>
 
-    
-<script src="script.js"></script>
-    
-</body>
+        <section id="todos">
+
+            <div class="card" id="outstanding">
+                <div class ="container">
+                    <h2>Outstanding</h2>
+                    <ul id="outstanding-task-list">
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" id="in-process">
+                <div class ="container">
+                    <h2>In process</h2>
+                    <ul id="in-process-task-list">
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" id= "complete">
+                <div class ="container">
+                    <h2>Completed</h2>
+                    <ul id="completed-task-list">
+
+                    </ul>
+                </div>
+            </div>
+
+
+            </section>
+
+        
+    <script src="script.js"></script>
+        
+    </body>
+</main>
 
 </html>
